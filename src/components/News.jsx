@@ -126,8 +126,8 @@ constructor(props){
       let parsedData=await data.json();
 
       this.setState({
-        articles:parsedData.articles,
-        totalresult:parsedData.totalResults,
+        articles:parsedData.articles  || [],
+        totalresult:parsedData.totalResults || 0,
         loading:false
       });
     }
