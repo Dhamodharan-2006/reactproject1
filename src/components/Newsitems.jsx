@@ -20,8 +20,8 @@ export default class Newsitems extends Component {
                 top:'0px',
               }}
               >{source}</span>
-<h5 className='card-title text-success'>{title.split("",50)}...</h5>
-<p className='card-text'>{description?description.split("",200):"no descripton"}</p>
+<h5 className='card-title text-success'>{title?title.split("").slice(0,50).join(""):"no-title"}...</h5>
+<p className='card-text'>{description?description.split("").slice(0,200).join(""):"no descripton"}</p>
 <p>By :{author?author:"Anonymous"}</p>
 <hr/>
 <p>Published At:{date}</p>
