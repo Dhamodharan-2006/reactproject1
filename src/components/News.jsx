@@ -57,7 +57,6 @@ export default class News extends Component {
   //    }
   //  ]
 
-articles=[]
 
 static defaultProps={
   country:"us",
@@ -127,7 +126,7 @@ constructor(props){
 
       this.setState({
         articles:parsedData.articles,
-        totalresult:parsedData.totalresult,
+        totalresult:parsedData.totalResults,
         loading:false
       });
     }
@@ -154,9 +153,9 @@ constructor(props){
         )
     })}
 </div><hr />
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-  <button class="btn btn-danger me-md-2" type="button" onClick={this.handleprev}>Prev </button>
-  <button class="btn btn-danger me-md-2" type="button" onClick={this.handlenext}>Next </button>
+<div className="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button className="btn btn-danger me-md-2" type="button" onClick={this.handleprev}>Prev </button>
+  <button className="btn btn-danger me-md-2" type="button" onClick={this.handlenext}>Next </button>
 </div>
 <hr />
 
