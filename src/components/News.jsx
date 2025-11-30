@@ -22,7 +22,7 @@ handlenext=async()=>{
           loading:true
         })
       }
-      let url=`https://newsapi.org/v2/everything?q=apple&from=2025-11-29&to=2025-11-29&sortBy=popularity&apiKey=2815af94b293430da5f85dfea06f2069
+      let url=`https://newsapi.org/v2/everything?domains=wsj.com&apiKey=003e144efd99481cb174e41dac4ef32f
 &page=${this.state.page+1}&pageSize=${this.props.pageSize}`
       let data=await fetch(url)
       let parsedData=await data.json();
@@ -40,7 +40,7 @@ handleprev=async()=>{
           loading:true
         })
       }
-      let url=`https://newsapi.org/v2/everything?q=apple&from=2025-11-29&to=2025-11-29&sortBy=popularity&apiKey=2815af94b293430da5f85dfea06f2069
+      let url=`https://newsapi.org/v2/everything?domains=wsj.com&apiKey=003e144efd99481cb174e41dac4ef32f
 &page=${this.state.page-1}&pageSize=${this.props.pageSize}`
       let data=await fetch(url)
       let parsedData=await data.json();
@@ -64,7 +64,7 @@ constructor(props){
     }}
 
     async componentDidMount(){
-      let url=`https://newsapi.org/v2/everything?q=apple&from=2025-11-29&to=2025-11-29&sortBy=popularity&apiKey=2815af94b293430da5f85dfea06f2069
+      let url=`https://newsapi.org/v2/everything?domains=wsj.com&apiKey=003e144efd99481cb174e41dac4ef32f
 &page=${this.state.page+1}&pageSize=${this.props.pageSize}`
 
       {
