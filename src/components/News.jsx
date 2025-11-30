@@ -22,7 +22,7 @@ handlenext=async()=>{
           loading:true
         })
       }
-      let url=`https://newsapi.org/v2/everything?domains=wsj.com&apiKey=003e144efd99481cb174e41dac4ef32f
+      let url=`https://gnews.io/api/v4/search?q=Google&lang=en&apikey=af673669f6d58c73c14f1b697ec2c0f6
 &page=${this.state.page+1}&pageSize=${this.props.pageSize}`
       let data=await fetch(url)
       let parsedData=await data.json();
@@ -40,7 +40,7 @@ handleprev=async()=>{
           loading:true
         })
       }
-      let url=`https://newsapi.org/v2/everything?domains=wsj.com&apiKey=003e144efd99481cb174e41dac4ef32f
+      let url=`https://gnews.io/api/v4/search?q=Google&lang=en&apikey=af673669f6d58c73c14f1b697ec2c0f6
 &page=${this.state.page-1}&pageSize=${this.props.pageSize}`
       let data=await fetch(url)
       let parsedData=await data.json();
@@ -64,7 +64,7 @@ constructor(props){
     }}
 
     async componentDidMount(){
-      let url=`https://newsapi.org/v2/everything?domains=wsj.com&apiKey=003e144efd99481cb174e41dac4ef32f
+      let url=`https://gnews.io/api/v4/search?q=Google&lang=en&apikey=af673669f6d58c73c14f1b697ec2c0f6
 &page=${this.state.page+1}&pageSize=${this.props.pageSize}`
 
       {
